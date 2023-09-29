@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func main() {
+/*func main() {
 	nums := []int{0, 1, 2, 2, 3, 0, 4, 2}
 	val := 3
 	removeElementThree(nums, val)
-}
+}*/
 
 func removeElement(nums []int, val int) int {
 	numsLenght := len(nums) - 1
