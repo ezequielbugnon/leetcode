@@ -102,6 +102,23 @@ func OrderCuadraticArray(nums []int) []int {
 
 */
 
+func DeleteDuplicate(arr []int) []int {
+	if len(arr) == 0 {
+		return arr
+	}
+	slow := 0
+
+	for fast := 1; fast < len(arr); fast++ {
+		if arr[fast] != arr[slow] {
+			slow++
+			arr[slow] = arr[fast]
+
+		}
+	}
+
+	return arr[:slow+1]
+}
+
 /*
    4. Contenedor con Más Agua (Difícil)
    📌 Descripción:
@@ -120,3 +137,34 @@ func OrderCuadraticArray(nums []int) []int {
    Calcula el área y mueve el puntero que tiene menor altura para intentar maximizar el área.
 
 */
+func WaterContainer(height []int) int {
+	maxArea := 0
+	left := 0
+	right := len(height) - 1
+
+	for left < right {
+		width := right - left
+		h := min(height[left], height[right])
+		area := width * h
+
+		if maxArea < area {
+			maxArea = area
+		}
+
+		if height[left] < height[right] {
+			left++
+		} else {
+			right--
+		}
+	}
+
+	return maxArea
+
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
