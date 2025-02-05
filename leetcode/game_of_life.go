@@ -1,6 +1,6 @@
 package leetcode
 
-func gameOfLife(board [][]int) {
+func GameOfLife(board [][]int) {
 	m, n := len(board), len(board[0])
 
 	// Direcciones de los vecinos (8 direcciones)

@@ -44,4 +44,7 @@ func main() {
 
 	leetcode.Rotate(matrix)
 	fmt.Println(" rotate:", matrix)
+	nums := []int{1, 2, 3, 4}
+	resultProduct := leetcode.ProductExceptSelf(nums)
+	fmt.Println("Resultado final:", resultProduct)
 }
