@@ -1,18 +1,16 @@
 package main
 
 import (
-	"fmt"
-	"leetcode/leetcode"
-	twopointers "leetcode/two-pointers"
+	datastructures "leetcode/topic/data_structures"
 )
 
 func main() {
-	fmt.Println("Hello world")
+	/*fmt.Println("Hello world")
 	array := []int{2, 7, 10, 15}
 
 	fmt.Println(twopointers.SumArrayTwoPointers(array, 9))
 
-	/*arr := []int{34, 7, 23, 32, 5, 62}
+	arr := []int{34, 7, 23, 32, 5, 62}
 	fmt.Println("Array desordenado:", arr)
 	sort.QuickSort(arr, 0, len(arr)-1)
 	fmt.Println("Array ordenado:", arr)
@@ -30,7 +28,7 @@ func main() {
 	container := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
 	fmt.Println("Array water container result:", container)
 	resultContainer := twopointers.WaterContainer(container)
-	fmt.Println("Array water container result:", resultContainer)*/
+	fmt.Println("Array water container result:", resultContainer)
 
 	element := []int{3, 2, 2, 3}
 	result := leetcode.RemoveElement(element, 3)
@@ -46,5 +44,18 @@ func main() {
 	fmt.Println(" rotate:", matrix)
 	nums := []int{1, 2, 3, 4}
 	resultProduct := leetcode.ProductExceptSelf(nums)
-	fmt.Println("Resultado final:", resultProduct)
+	fmt.Println("Resultado final:", resultProduct)*/
+
+	linkedlist := datastructures.LinkedList{}
+
+	linkedlist.AddNode(2)
+	linkedlist.AddNode(3)
+	linkedlist.AddNode(7)
+	linkedlist.AddNode(20)
+
+	linkedlist.Print()
+	linkedlist.Reverse()
+	println()
+
+	linkedlist.Print()
 }
