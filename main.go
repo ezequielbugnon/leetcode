@@ -1,7 +1,8 @@
 package main
 
 import (
-	datastructures "leetcode/topic/data_structures"
+	"fmt"
+	"leetcode/leetcode"
 )
 
 func main() {
@@ -44,7 +45,7 @@ func main() {
 	fmt.Println(" rotate:", matrix)
 	nums := []int{1, 2, 3, 4}
 	resultProduct := leetcode.ProductExceptSelf(nums)
-	fmt.Println("Resultado final:", resultProduct)*/
+	fmt.Println("Resultado final:", resultProduct)
 
 	linkedlist := datastructures.LinkedList{}
 
@@ -57,5 +58,7 @@ func main() {
 	linkedlist.Reverse()
 	println()
 
-	linkedlist.Print()
+	linkedlist.Print()*/
+
+	fmt.Println(leetcode.ReverseWords("the sky is blue"))
 }
