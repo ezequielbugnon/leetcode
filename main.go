@@ -58,7 +58,16 @@ func main() {
 	linkedlist.Reverse()
 	println()
 
-	linkedlist.Print()*/
+	linkedlist.Print()
 
 	fmt.Println(leetcode.ReverseWords("the sky is blue"))
+	nums := []int{1, 2, 3, 4}
+	resultProduct := leetcode.ProductExceptSelf(nums)
+	fmt.Println("Resultado final:", resultProduct)*/
+
+	test := "aabbbbbbbbbbbbbbbccc"
+	bs := []byte(test)
+	result := leetcode.Compress(bs)
+	fmt.Println("Resultado final:", result)
+
 }
