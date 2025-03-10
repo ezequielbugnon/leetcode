@@ -8,7 +8,7 @@ func Rotate(matrix [][]int) {
 			matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
 		}
 	}
-
+	// [n-i-1] tecniche inverse index
 	for i := 0; i < n; i++ {
 		for j := 0; j < n/2; j++ {
 			matrix[i][j], matrix[i][n-i-1] = matrix[i][n-i-1], matrix[i][j]

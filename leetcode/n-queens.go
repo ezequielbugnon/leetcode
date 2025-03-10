@@ -2,26 +2,26 @@ package leetcode
 
 import "math"
 
-func SolveNQueens(table []int, row, N int) bool {
+func SolveNQueens(table []int, row, N int) int {
 	if row == N {
-		println(table)
-		return true
+		return 1
 	}
 
+	count := 0
 	for col := 0; col < N; col++ {
 		if isValid(table, row, col) {
 			table[row] = col
-			SolveNQueens(table, row+1, N)
+			count += SolveNQueens(table, row+1, N)
 		}
 	}
 
-	return false
+	return count
 
 }
 
 func isValid(table []int, row, col int) bool {
-	for i := 0; i < row; i++ {
-		if table[i] == col || math.Abs(float64(table[i]-col)) == math.Abs(float64(i-row)) {
+	for r := range row {
+		if table[r] == col || math.Abs(float64(table[r]-col)) == math.Abs(float64(r-row)) {
 			return false
 		}
 	}
